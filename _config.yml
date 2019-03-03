@@ -1,31 +1,26 @@
-permalink: /:title/
+# Title of your blog; shows in the header
+name: "Tech"
 
-# The release of Jekyll Now that you're using
-version: v1.2.0
+# Description of your content (will only be used on Google Search)
+description: "Blogging what I do"
 
-# Jekyll 3 now only supports Kramdown for Markdown
-kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
-  input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+# Your name. Will show in your footer + sidebar
+author: "Mudit Maurya"
 
-# Set the Sass partials directory, as we're using @imports
+url: "http://MuditMaurya.github.io"
+
+# Other (refer to http://jekyllrb.com/docs/home/ for further details on the below)
+
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/page/:num"
+
+# SCSS
+
 sass:
-  style: :expanded # You might prefer to minify using :compressed
-
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-
-# Exclude these files from your production _site
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
+  sass_dir: _scss
+  style: :compressed
