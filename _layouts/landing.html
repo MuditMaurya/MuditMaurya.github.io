@@ -15,7 +15,7 @@
           <section id="banner">
             <div class="inner">
               <h1>{{ site.title }}</h1>
-              <!-- <p>{{ site.description }}</p>  Commented for Release v0.0.1-->
+              <p>{{ site.description }}</p>
               <!--
               <ul class="actions">
                 <li><a href="#" class="button special">Activate</a></li>
@@ -33,14 +33,17 @@
                 for socloc in site.social %}{%
                   if socloc[1] %}{%
                     if socloc[0] == 'email' %}
-                  <li><a target="_blank" href="{%
-                      if socloc[1] contains '@' %}mailto:{{ socloc[1] }}{%
-                      else %}{{ socloc[1] }}{%
+                  <li><div class="tooltip" data-toggle="tooltip">
+                    <a target="_blank" href="{%
+                      if socloc[1].mail contains '@' %}mailto:{{ socloc[1].mail }}{%
+                      else %}{{ socloc[1].mail }}{%
                       endif %}" class="icon fa-envelope"
-                         ><span class="label">E-mail</span></a></li>{%
+                         ><span class="tooltiptext">{{ socloc[1].tooltip }}</span></a></div></li>{%
                     else %}
-                  <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-{{ socloc[0] }}"
-                         ><span class="label">{{ socloc[0] }}</span></a></li>{%
+                  <li><div class="tooltip" data-toggle="tooltip">
+                    <!-- {{ socloc[0] }} -->
+                    <a target="_blank" href="{{ socloc[1].url }}"
+                    class="icon fa-{{ socloc[0] }}" ><span class="tooltiptext">{{ socloc[1].tooltip }}</span></a></div></li>{%
                     endif %}{%
                   endif %}{%
                 endfor %}
