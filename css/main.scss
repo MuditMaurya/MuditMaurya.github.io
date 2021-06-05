@@ -2184,6 +2184,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 
+
 		.copyright {
 			color: _palette(fg-light);
 			font-size: 0.8em;
@@ -2219,6 +2220,34 @@ $baseurl: '{{ site.baseurl }}/images';
 					line-height: 1.65em;
 					margin: 0;
 					padding: 0.5em 0;
+				}
+			}
+		}
+
+		@include breakpoint(medium) {
+			@include padding(4em, 3em);
+		}
+
+		@include breakpoint(small) {
+			@include padding(3em, 2em);
+		}
+	}
+
+/* Banner-Icons */
+
+	#banner-icons {
+		@include padding(6em, 0);
+		//background-color: darken(_palette(bg), 8);
+		text-align: center;
+
+		.icons {
+			font-size: 1.5em;
+
+			a {
+				color: _palette(fg-light);
+
+				&:hover {
+					color: _palette(fg);
 				}
 			}
 		}
