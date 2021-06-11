@@ -315,6 +315,15 @@ input[type="radio"] + label:before { border-radius: 100%; }
 
 .box.alt { border: 0; border-radius: 0; padding: 0; }
 
+/* Tool Tip */
+.tooltip { position: relative; display: inline-table; }
+
+.tooltip .tooltiptext { visibility: hidden; width: auto; background-color: rgba(85, 85, 85, 0.466); color: #fff; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; bottom: 125%; left: 125%; margin-left: -30px; opacity: 0; transition: opacity 0.3s; }
+
+.tooltip .tooltiptext::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #555 transparent transparent transparent; }
+
+.tooltip:hover .tooltiptext { visibility: visible; opacity: 90; font-size: x-small; }
+
 /* Icon */
 .icon { text-decoration: none; border-bottom: none; position: relative; }
 
@@ -1183,7 +1192,7 @@ body.landing #footer { background-color: rgba(29, 36, 42, 0.9); }
 
 body.is-mobile.landing #page-wrapper { background: none; }
 
-body.is-mobile.landing #banner, body.is-mobile.landing .wrapper.style4 { background-image: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/banner.jpg"); background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/banner.jpg"); background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/banner.jpg"); background-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/banner.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover; }
+body.is-mobile.landing #banner, body.is-mobile.landing .wrapper.style4 { background-image: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/banner.jpg"); background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/banner.jpg"); background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/banner.jpg"); background-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("/images/banner.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; }
 
 body.is-mobile.landing #footer { background-color: #1d242a; }
 

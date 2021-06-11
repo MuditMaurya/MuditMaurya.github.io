@@ -544,6 +544,49 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+/* Tool Tip */
+
+.tooltip {
+	position: relative;
+	display: inline-table;
+	//border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+	visibility: hidden;
+	width: auto;
+	background-color: rgba(85, 85, 85, 0.466);
+	color: #fff;
+	text-align:center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 125%;
+	margin-left: -30px;
+	opacity: 0;
+	transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 90;
+	font-size:x-small;
+  }
+
+
 /* Icon */
 
 	.icon {
@@ -2324,6 +2367,7 @@ $baseurl: '{{ site.baseurl }}/images';
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
+				min-height: 100vh;
 			}
 
 			#footer {

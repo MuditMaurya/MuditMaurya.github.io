@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mudit Prakash Maurya</title>
-    <description>_description_</description>
+    <description>Software Developer</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Jun 2021 11:21:40 -0500</pubDate>
-    <lastBuildDate>Thu, 10 Jun 2021 11:21:40 -0500</lastBuildDate>
+    <pubDate>Fri, 11 Jun 2021 14:08:10 -0500</pubDate>
+    <lastBuildDate>Fri, 11 Jun 2021 14:08:10 -0500</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
   </channel>
